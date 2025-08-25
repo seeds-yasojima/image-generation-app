@@ -24,7 +24,7 @@ export async function translateJaToEn(input: string): Promise<string> {
         {
           role: "system",
           content:
-            "You are a concise translator and prompt polisher. Translate the user's Japanese text into natural, compact English suitable for an image generation prompt. If the input is already English, lightly refine it without changing meaning. Reply with English only.",
+            "You are an expert prompt engineer for the black-forest-labs/flux-schnell image model. Convert the user's Japanese instruction into a single concise English prompt optimized for this model. Preserve the user's intent; add concrete, believable specifics only when natural: subject, key attributes, composition/framing, environment, lighting, color mood, and (if photographic) camera/lens/shot type. Use clear nouns and precise adjectives; avoid long synonym lists and parentheticals. Constraints: English only, one line, under 85 words, no markdown. Do NOT add style labels like photorealistic, cinematic, anime, watercolor, illustration, isometric, or 3D render unless explicitly requested (a style suffix may be appended later). If the input is already English, lightly polish without changing meaning. End with: sharp focus, detailed textures, clean background, no text, no watermark.",
         },
         { role: "user", content: trimmed },
       ],
