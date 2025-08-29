@@ -14,7 +14,7 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { IMAGE_STYLES } from "@/lib/styles";
 import { cn } from "@/lib/utils";
-import { BotIcon, DownloadIcon, Pencil, Wand2 } from "lucide-react";
+import { BotIcon, DownloadIcon, Wand2 } from "lucide-react";
 
 type PollResponse = {
   status: "starting" | "processing" | "succeeded" | "failed" | "canceled";
@@ -179,7 +179,9 @@ export default function ImageGenerator() {
                         className={cn(
                           buttonVariants({ variant: "outline", size: "lg" }),
                           "w-full justify-center cursor-pointer select-none h-auto py-3 border-2",
-                          "peer-checked:border-blue-700 peer-checked:bg-blue-50 dark:peer-checked:bg-sky-950/30",
+                          "peer-checked:border-blue-600 peer-checked:bg-blue-50 peer-checked:text-blue-700 peer-checked:shadow-sm",
+                          "dark:peer-checked:border-sky-400 dark:peer-checked:bg-sky-500/20 dark:peer-checked:text-sky-300 dark:peer-checked:shadow-sky-500/25",
+                          "hover:border-blue-300 dark:hover:border-sky-600 transition-all duration-200",
                           "peer-focus-visible:ring-ring/50 peer-focus-visible:border-ring peer-focus-visible:ring-[3px]"
                         )}
                       >
@@ -214,7 +216,9 @@ export default function ImageGenerator() {
                         className={cn(
                           buttonVariants({ variant: "outline", size: "lg" }),
                           "w-full justify-center cursor-pointer select-none h-auto py-3 border-2",
-                          "peer-checked:border-blue-700 peer-checked:bg-blue-50 dark:peer-checked:bg-sky-950/30",
+                          "peer-checked:border-blue-600 peer-checked:bg-blue-50 peer-checked:text-blue-700 peer-checked:shadow-sm",
+                          "dark:peer-checked:border-sky-400 dark:peer-checked:bg-sky-500/20 dark:peer-checked:text-sky-300 dark:peer-checked:shadow-sky-500/25",
+                          "hover:border-blue-300 dark:hover:border-sky-600 transition-all duration-200",
                           "peer-focus-visible:ring-ring/50 peer-focus-visible:border-ring peer-focus-visible:ring-[3px]"
                         )}
                       >
