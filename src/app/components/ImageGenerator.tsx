@@ -14,7 +14,7 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { IMAGE_STYLES } from "@/lib/styles";
 import { cn } from "@/lib/utils";
-import { BotIcon, DownloadIcon, Pencil } from "lucide-react";
+import { BotIcon, DownloadIcon, Pencil, Wand2 } from "lucide-react";
 
 type PollResponse = {
   status: "starting" | "processing" | "succeeded" | "failed" | "canceled";
@@ -131,14 +131,14 @@ export default function ImageGenerator() {
   }
 
   return (
-    <Card className="w-full max-w-5xl">
-      <CardHeader>
+    <Card className="w-full max-w-5xl border-transparent bg-background/70 backdrop-blur-xl shadow-[0_1px_0_0_rgba(0,0,0,0.03),0_10px_30px_-15px_rgba(0,0,0,0.2)] dark:shadow-[0_1px_0_0_rgba(255,255,255,0.06),0_10px_30px_-15px_rgba(0,0,0,0.6)] mx-auto">
+      <CardHeader className="border-b/40">
         <CardTitle className="flex items-center gap-1.5">
-          <Pencil className="size-4" />
-          画像生成指示
+          <Wand2 className="size-4" />
+          画像生成
         </CardTitle>
         <CardDescription className="text-xs mt-1">
-          日本語で指示文を入力すると画像生成精度を向上させるために自動で英語に翻訳して、画像を生成します。
+          日本語の指示を高品質な英語プロンプトに変換して生成します。
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -179,7 +179,7 @@ export default function ImageGenerator() {
                         className={cn(
                           buttonVariants({ variant: "outline", size: "lg" }),
                           "w-full justify-center cursor-pointer select-none h-auto py-3 border-2",
-                          "peer-checked:border-blue-700 peer-checked:bg-blue-50",
+                          "peer-checked:border-blue-700 peer-checked:bg-blue-50 dark:peer-checked:bg-sky-950/30",
                           "peer-focus-visible:ring-ring/50 peer-focus-visible:border-ring peer-focus-visible:ring-[3px]"
                         )}
                       >
@@ -214,7 +214,7 @@ export default function ImageGenerator() {
                         className={cn(
                           buttonVariants({ variant: "outline", size: "lg" }),
                           "w-full justify-center cursor-pointer select-none h-auto py-3 border-2",
-                          "peer-checked:border-blue-700 peer-checked:bg-blue-50",
+                          "peer-checked:border-blue-700 peer-checked:bg-blue-50 dark:peer-checked:bg-sky-950/30",
                           "peer-focus-visible:ring-ring/50 peer-focus-visible:border-ring peer-focus-visible:ring-[3px]"
                         )}
                       >
@@ -269,7 +269,7 @@ export default function ImageGenerator() {
             ) : (
               <div
                 className={cn(
-                  "w-full max-h-[512px] border rounded-md flex items-center justify-center text-sm text-muted-foreground",
+                  "w-full max-h-[512px] border rounded-md flex items-center justify-center text-sm text-muted-foreground bg-muted/40",
                   aspectClass
                 )}
               >

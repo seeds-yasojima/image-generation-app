@@ -3,22 +3,30 @@ import SampleGallery from "./components/SampleGallery";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen p-6 sm:p-10 flex items-start justify-center bg-slate-50">
-      <main className="w-full flex flex-col items-center">
-        <div className="text-center">
-          <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-            いい感じにサクッと生成！画像生成アプリ 🎨
-          </h1>
-          <p className="text-sm text-muted-foreground mt-2">
-            あなたの指示をいい感じに解釈して画像を生成します
-          </p>
+    <div className="w-full">
+      <section className="text-center">
+        <div className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs text-muted-foreground shadow-sm bg-background/80 backdrop-blur">
+          <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          ベータ版
         </div>
+        <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+          いい感じにサクッと生成！
+          <span className="bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">
+            画像生成
+          </span>
+        </h1>
+        <p className="mx-auto mt-4 text-sm text-muted-foreground">
+          あなたの日本語の指示を自動で高品質な英語プロンプトに変換して、
+          高精度な画像をサクッと生成します。
+        </p>
+      </section>
 
-        <div className="my-8">
-          <ImageGenerator />
-        </div>
+      <div className="mt-8">
+        <ImageGenerator />
+      </div>
+      <div className="mt-10">
         <SampleGallery />
-      </main>
+      </div>
     </div>
   );
 }

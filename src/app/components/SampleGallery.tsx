@@ -111,6 +111,9 @@ export default function SampleGallery({
         <h2 className="text-2xl font-semibold tracking-tight">
           生成画像サンプル
         </h2>
+        <p className="mt-1 text-xs text-muted-foreground">
+          タップ/ホバーでキャプションを表示
+        </p>
       </div>
 
       <div className="mt-6 px-2 sm:px-0 columns-2 sm:columns-3 lg:columns-4 gap-5 md:gap-4 [column-fill:balance]">
@@ -120,14 +123,14 @@ export default function SampleGallery({
             className="group relative mb-4 break-inside-avoid"
           >
             <div
-              className={`relative w-full overflow-hidden rounded-md ${item.ratioClass} bg-muted shadow-sm ring-1 ring-black/5 dark:ring-white/10 transition-all duration-300 group-hover:ring-2 group-hover:ring-blue-500/40`}
+              className={`relative w-full overflow-hidden rounded-lg ${item.ratioClass} bg-muted shadow-sm ring-1 ring-black/5 dark:ring-white/10 transition-all duration-300 group-hover:ring-2 group-hover:ring-blue-500/40`}
             >
               <Image
                 src={item.src}
                 alt={item.alt}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover"
+                className="object-cover will-change-transform group-hover:scale-[1.02] transition-transform duration-300"
                 priority={index < 8}
               />
 
