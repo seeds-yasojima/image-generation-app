@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
           いい感じにサクッと生成！
           <span className="bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">
-            画像生成
+            画像生成アプリ
           </span>
         </h1>
         <p className="mx-auto mt-4 text-sm text-muted-foreground">
